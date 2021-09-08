@@ -1,0 +1,9 @@
+C:\Users\usuario\source\repos\SistemaMediar\Negocio\bin\Debug\Negocio.dll
+C:\Users\usuario\source\repos\SistemaMediar\Negocio\bin\Debug\Negocio.pdb
+C:\Users\usuario\source\repos\SistemaMediar\Negocio\bin\Debug\RestSharp.dll
+C:\Users\usuario\source\repos\SistemaMediar\Negocio\bin\Debug\RestSharp.xml
+C:\Users\usuario\source\repos\SistemaMediar\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\usuario\source\repos\SistemaMediar\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\usuario\source\repos\SistemaMediar\Negocio\obj\Debug\Negocio.dll
+C:\Users\usuario\source\repos\SistemaMediar\Negocio\obj\Debug\Negocio.pdb
+C:\Users\usuario\source\repos\SistemaMediar\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache

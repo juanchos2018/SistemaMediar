@@ -1,0 +1,9 @@
+C:\Users\usuario\source\repos\SistemaMediar\Entidad\bin\Debug\Entidad.dll
+C:\Users\usuario\source\repos\SistemaMediar\Entidad\bin\Debug\Entidad.pdb
+C:\Users\usuario\source\repos\SistemaMediar\Entidad\bin\Debug\Datos.dll
+C:\Users\usuario\source\repos\SistemaMediar\Entidad\bin\Debug\Datos.pdb
+C:\Users\usuario\source\repos\SistemaMediar\Entidad\obj\Debug\Entidad.csprojAssemblyReference.cache
+C:\Users\usuario\source\repos\SistemaMediar\Entidad\obj\Debug\Entidad.csproj.CoreCompileInputs.cache
+C:\Users\usuario\source\repos\SistemaMediar\Entidad\obj\Debug\Entidad.csproj.CopyComplete
+C:\Users\usuario\source\repos\SistemaMediar\Entidad\obj\Debug\Entidad.dll
+C:\Users\usuario\source\repos\SistemaMediar\Entidad\obj\Debug\Entidad.pdb

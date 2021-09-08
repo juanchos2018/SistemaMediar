@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\PdfiumViewer.Native.x86.v8-xfa.2017.11.2.204\build\PdfiumViewer.Native.x86.v8-xfa.props" Condition="Exists('..\packages\PdfiumViewer.Native.x86.v8-xfa.2017.11.2.204\build\PdfiumViewer.Native.x86.v8-xfa.props')" />
+  <Import Project="..\packages\PdfiumViewer.Native.x86_64.v8-xfa.2017.11.2.204\build\PdfiumViewer.Native.x86_64.v8-xfa.props" Condition="Exists('..\packages\PdfiumViewer.Native.x86_64.v8-xfa.2017.11.2.204\build\PdfiumViewer.Native.x86_64.v8-xfa.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA86C49C-19FD-4B13-98F8-C5D5180906A5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SistemaMediar</RootNamespace>
+    <AssemblyName>SistemaMediar</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PdfiumViewer, Version=2.13.0.0, Culture=neutral, PublicKeyToken=91e4789cfb0609e0, processorArchitecture=MSIL">
+      <HintPath>..\packages\PdfiumViewer.2.13.0.0\lib\net20\PdfiumViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="SautinSoft.Document, Version=5.3.6.22, Culture=neutral, PublicKeyToken=e759c76c7515592a, processorArchitecture=MSIL">
+      <HintPath>..\packages\sautinsoft.document.5.3.6.22\lib\net47\SautinSoft.Document.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xceed.Document.NET, Version=1.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocX.1.8.0\lib\net40\Xceed.Document.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Words.NET, Version=1.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocX.1.8.0\lib\net40\Xceed.Words.NET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClsBotones.cs" />
+    <Compile Include="Control\ControlArchivo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\ControlArchivo.Designer.cs">
+      <DependentUpon>ControlArchivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ControlArchivo2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\ControlArchivo2.Designer.cs">
+      <DependentUpon>ControlArchivo2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ControlCarpeta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\ControlCarpeta.Designer.cs">
+      <DependentUpon>ControlCarpeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ControlCarpeta2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\ControlCarpeta2.Designer.cs">
+      <DependentUpon>ControlCarpeta2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ControlCon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\ControlCon.Designer.cs">
+      <DependentUpon>ControlCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\DocConciliacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\DocConciliacion.Designer.cs">
+      <DependentUpon>DocConciliacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\RjTexbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\RjTexbox.Designer.cs">
+      <DependentUpon>RjTexbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\RjTexboxt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\RjTexboxt.Designer.cs">
+      <DependentUpon>RjTexboxt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\TodosDocumentos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\TodosDocumentos.Designer.cs">
+      <DependentUpon>TodosDocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogo\DlgArchivarCaso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogo\DlgArchivarCaso.Designer.cs">
+      <DependentUpon>DlgArchivarCaso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogo\DlgCarpeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogo\DlgCarpeta.Designer.cs">
+      <DependentUpon>DlgCarpeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogo\DlgCasos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogo\DlgCasos.Designer.cs">
+      <DependentUpon>DlgCasos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogo\DlgClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogo\DlgClientes.Designer.cs">
+      <DependentUpon>DlgClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogo\DlgMensaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogo\DlgMensaje.Designer.cs">
+      <DependentUpon>DlgMensaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogo\DlgMensajeOk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogo\DlgMensajeOk.Designer.cs">
+      <DependentUpon>DlgMensajeOk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogo\DlgNuevoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogo\DlgNuevoCliente.Designer.cs">
+      <DependentUpon>DlgNuevoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogo\DlgNuevoDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogo\DlgNuevoDocumento.Designer.cs">
+      <DependentUpon>DlgNuevoDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogo\DlgNuevoDocumento2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogo\DlgNuevoDocumento2.Designer.cs">
+      <DependentUpon>DlgNuevoDocumento2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogo\DlgOk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogo\DlgOk.Designer.cs">
+      <DependentUpon>DlgOk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogo\DlgSendEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogo\DlgSendEmail.Designer.cs">
+      <DependentUpon>DlgSendEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\MyInterface.cs" />
+    <Compile Include="Model\TextChangedEventArgs.cs" />
+    <Compile Include="Presentacion\FrmApuntes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmApuntes.Designer.cs">
+      <DependentUpon>FrmApuntes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmArchivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmArchivos.Designer.cs">
+      <DependentUpon>FrmArchivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmArchivos2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmArchivos2.Designer.cs">
+      <DependentUpon>FrmArchivos2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmArchivos3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmArchivos3.Designer.cs">
+      <DependentUpon>FrmArchivos3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmCarpetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmCarpetas.Designer.cs">
+      <DependentUpon>FrmCarpetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmCasos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmCasos.Designer.cs">
+      <DependentUpon>FrmCasos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmDashoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmDashoard.Designer.cs">
+      <DependentUpon>FrmDashoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmDetalleCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmDetalleCliente.Designer.cs">
+      <DependentUpon>FrmDetalleCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmDocumentosCaso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmDocumentosCaso.Designer.cs">
+      <DependentUpon>FrmDocumentosCaso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmMateria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmMateria.Designer.cs">
+      <DependentUpon>FrmMateria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmNuevoCaso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmNuevoCaso.Designer.cs">
+      <DependentUpon>FrmNuevoCaso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmNuevoCaso2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmNuevoCaso2.Designer.cs">
+      <DependentUpon>FrmNuevoCaso2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmNuevoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmNuevoCliente.Designer.cs">
+      <DependentUpon>FrmNuevoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmPrueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmPrueba.Designer.cs">
+      <DependentUpon>FrmPrueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmTodosDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmTodosDocumentos.Designer.cs">
+      <DependentUpon>FrmTodosDocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\prueba2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\prueba2.Designer.cs">
+      <DependentUpon>prueba2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Control\ControlArchivo.resx">
+      <DependentUpon>ControlArchivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ControlArchivo2.resx">
+      <DependentUpon>ControlArchivo2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ControlCarpeta.resx">
+      <DependentUpon>ControlCarpeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ControlCarpeta2.resx">
+      <DependentUpon>ControlCarpeta2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ControlCon.resx">
+      <DependentUpon>ControlCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\DocConciliacion.resx">
+      <DependentUpon>DocConciliacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\RjTexbox.resx">
+      <DependentUpon>RjTexbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\RjTexboxt.resx">
+      <DependentUpon>RjTexboxt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\TodosDocumentos.resx">
+      <DependentUpon>TodosDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogo\DlgArchivarCaso.resx">
+      <DependentUpon>DlgArchivarCaso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogo\DlgCarpeta.resx">
+      <DependentUpon>DlgCarpeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogo\DlgCasos.resx">
+      <DependentUpon>DlgCasos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogo\DlgClientes.resx">
+      <DependentUpon>DlgClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogo\DlgMensaje.resx">
+      <DependentUpon>DlgMensaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogo\DlgMensajeOk.resx">
+      <DependentUpon>DlgMensajeOk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogo\DlgNuevoCliente.resx">
+      <DependentUpon>DlgNuevoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogo\DlgNuevoDocumento.resx">
+      <DependentUpon>DlgNuevoDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogo\DlgNuevoDocumento2.resx">
+      <DependentUpon>DlgNuevoDocumento2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogo\DlgOk.resx">
+      <DependentUpon>DlgOk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogo\DlgSendEmail.resx">
+      <DependentUpon>DlgSendEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmApuntes.resx">
+      <DependentUpon>FrmApuntes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmArchivos.resx">
+      <DependentUpon>FrmArchivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmArchivos2.resx">
+      <DependentUpon>FrmArchivos2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmArchivos3.resx">
+      <DependentUpon>FrmArchivos3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmCarpetas.resx">
+      <DependentUpon>FrmCarpetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmCasos.resx">
+      <DependentUpon>FrmCasos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmDashoard.resx">
+      <DependentUpon>FrmDashoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmDetalleCliente.resx">
+      <DependentUpon>FrmDetalleCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmDocumentosCaso.resx">
+      <DependentUpon>FrmDocumentosCaso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmMateria.resx">
+      <DependentUpon>FrmMateria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmNuevoCaso.resx">
+      <DependentUpon>FrmNuevoCaso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmNuevoCaso2.resx">
+      <DependentUpon>FrmNuevoCaso2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmNuevoCliente.resx">
+      <DependentUpon>FrmNuevoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmPrueba.resx">
+      <DependentUpon>FrmPrueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmTodosDocumentos.resx">
+      <DependentUpon>FrmTodosDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\prueba2.resx">
+      <DependentUpon>prueba2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Desktop\descargacalendar\Calendar.NET\Calendar.NET.csproj">
+      <Project>{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}</Project>
+      <Name>Calendar.NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidad\Entidad.csproj">
+      <Project>{F897FE7C-314C-45CC-B7B3-805994831537}</Project>
+      <Name>Entidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{DE60E7CA-4DE1-440E-9158-5940694A10A0}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_8x_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animation_500_km2tdq3t.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animation_500_km2tjo1s.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carpeta1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Casos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clients.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elemento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email1send.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exe1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoemail1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagepdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoimagen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mediasjsp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pregunga1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\terminarcaso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ver1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alerta.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagentxt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagenul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconatras.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoatraswhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoatrasgrem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atrasgreem.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\PdfiumViewer.Native.x86_64.v8-xfa.2017.11.2.204\build\PdfiumViewer.Native.x86_64.v8-xfa.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\PdfiumViewer.Native.x86_64.v8-xfa.2017.11.2.204\build\PdfiumViewer.Native.x86_64.v8-xfa.props'))" />
+    <Error Condition="!Exists('..\packages\PdfiumViewer.Native.x86.v8-xfa.2017.11.2.204\build\PdfiumViewer.Native.x86.v8-xfa.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\PdfiumViewer.Native.x86.v8-xfa.2017.11.2.204\build\PdfiumViewer.Native.x86.v8-xfa.props'))" />
+  </Target>
+</Project>

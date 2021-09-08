@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaMediar", "SistemaMediar\SistemaMediar.csproj", "{BA86C49C-19FD-4B13-98F8-C5D5180906A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{8844EC6C-5FA5-4BC4-9923-84682DBAF791}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidad", "Entidad\Entidad.csproj", "{F897FE7C-314C-45CC-B7B3-805994831537}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{DE60E7CA-4DE1-440E-9158-5940694A10A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{4927B8D0-5108-4C55-9FEC-17C35EB2D0BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar.NET", "..\..\..\Desktop\descargacalendar\Calendar.NET\Calendar.NET.csproj", "{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA86C49C-19FD-4B13-98F8-C5D5180906A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA86C49C-19FD-4B13-98F8-C5D5180906A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA86C49C-19FD-4B13-98F8-C5D5180906A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA86C49C-19FD-4B13-98F8-C5D5180906A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8844EC6C-5FA5-4BC4-9923-84682DBAF791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8844EC6C-5FA5-4BC4-9923-84682DBAF791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8844EC6C-5FA5-4BC4-9923-84682DBAF791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8844EC6C-5FA5-4BC4-9923-84682DBAF791}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F897FE7C-314C-45CC-B7B3-805994831537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F897FE7C-314C-45CC-B7B3-805994831537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F897FE7C-314C-45CC-B7B3-805994831537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F897FE7C-314C-45CC-B7B3-805994831537}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE60E7CA-4DE1-440E-9158-5940694A10A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE60E7CA-4DE1-440E-9158-5940694A10A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE60E7CA-4DE1-440E-9158-5940694A10A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE60E7CA-4DE1-440E-9158-5940694A10A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4927B8D0-5108-4C55-9FEC-17C35EB2D0BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4927B8D0-5108-4C55-9FEC-17C35EB2D0BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4927B8D0-5108-4C55-9FEC-17C35EB2D0BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4927B8D0-5108-4C55-9FEC-17C35EB2D0BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B319555B-A7D4-4F49-B9AC-41E3211DBC39}
+	EndGlobalSection
+EndGlobal
