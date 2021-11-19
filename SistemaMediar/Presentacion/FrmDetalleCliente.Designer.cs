@@ -123,7 +123,7 @@ namespace SistemaMediar.Presentacion
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::SistemaMediar.Properties.Resources.pregunga1;
+            this.pictureBox1.Image = global::SistemaMediar.Properties.Resources.userimg;
             this.pictureBox1.Location = new System.Drawing.Point(21, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(143, 149);
@@ -136,7 +136,7 @@ namespace SistemaMediar.Presentacion
             // 
             this.lbltelefono.AutoSize = true;
             this.lbltelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltelefono.Location = new System.Drawing.Point(216, 104);
+            this.lbltelefono.Location = new System.Drawing.Point(220, 104);
             this.lbltelefono.Name = "lbltelefono";
             this.lbltelefono.Size = new System.Drawing.Size(51, 20);
             this.lbltelefono.TabIndex = 5;

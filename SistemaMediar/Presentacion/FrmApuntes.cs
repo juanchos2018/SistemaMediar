@@ -57,5 +57,10 @@ namespace SistemaMediar.Presentacion
         {
 
         }
+
+        private void dgvApuntes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

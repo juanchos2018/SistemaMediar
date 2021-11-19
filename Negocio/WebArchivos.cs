@@ -11,10 +11,12 @@ namespace Negocio
     {
         ClsClienteWeb server = new ClsClienteWeb();
         public string SubirArchivos(string archivos, int IdEmpresa, string IdCarpeta)
-        {//  client.SubirArchivos(files, RUC, txtanio.Text,NombreCaja, Serie, NumeroLiquidacion.ToString(), tipo);
+        {   //client.SubirArchivos(files, RUC, txtanio.Text,NombreCaja, Serie, NumeroLiquidacion.ToString(), tipo);
+           
             string[] parametros = { "IdEmpresa", "IdCarpeta" };
             object[] valores = { IdEmpresa, IdCarpeta };
             return server.SubirArchivos(archivos, parametros, valores, "api/Archivo");
+
         }
 
 

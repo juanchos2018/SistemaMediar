@@ -37,6 +37,8 @@ namespace SistemaMediar.Presentacion
             lblnombres.Text = cli.NombreCliente + " " + cli.ApellidoCliente;
             lbltelefono.Text = cli.CelularCliente;
             lbldni.Text = cli.DniCliente;
+            txtdniciente.Visible = false;
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

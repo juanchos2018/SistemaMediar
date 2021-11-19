@@ -39,6 +39,8 @@ namespace SistemaMediar.Presentacion
             this.rjButton1 = new SistemaMediar.RJButton();
             this.btnregistrar = new SistemaMediar.RJButton();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtdnihijo = new SistemaMediar.Control.RjTexboxt();
             this.ftfechanacimiento1 = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -72,7 +74,6 @@ namespace SistemaMediar.Presentacion
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtdnihijo = new SistemaMediar.Control.RjTexboxt();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -176,6 +177,7 @@ namespace SistemaMediar.Presentacion
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel7.Controls.Add(this.label14);
             this.panel7.Controls.Add(this.txtdnihijo);
             this.panel7.Controls.Add(this.ftfechanacimiento1);
             this.panel7.Controls.Add(this.label13);
@@ -215,6 +217,35 @@ namespace SistemaMediar.Presentacion
             this.panel7.TabIndex = 62;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(96, 255);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(35, 15);
+            this.label14.TabIndex = 99;
+            this.label14.Text = "edad";
+            // 
+            // txtdnihijo
+            // 
+            this.txtdnihijo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtdnihijo.BorderColor = System.Drawing.Color.Green;
+            this.txtdnihijo.BorderFocusColor = System.Drawing.Color.DarkGreen;
+            this.txtdnihijo.BorderSize = 2;
+            this.txtdnihijo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdnihijo.ForeColor = System.Drawing.Color.Black;
+            this.txtdnihijo.Location = new System.Drawing.Point(9, 275);
+            this.txtdnihijo.Margin = new System.Windows.Forms.Padding(5);
+            this.txtdnihijo.Multiline = false;
+            this.txtdnihijo.Name = "txtdnihijo";
+            this.txtdnihijo.Padding = new System.Windows.Forms.Padding(5);
+            this.txtdnihijo.PasswordChar = false;
+            this.txtdnihijo.Size = new System.Drawing.Size(72, 27);
+            this.txtdnihijo.TabIndex = 98;
+            this.txtdnihijo.Texts = "";
+            this.txtdnihijo.UnderlinedStyle = false;
+            // 
             // ftfechanacimiento1
             // 
             this.ftfechanacimiento1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -227,11 +258,12 @@ namespace SistemaMediar.Presentacion
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(299, 256);
+            this.label13.Location = new System.Drawing.Point(364, 255);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(107, 15);
             this.label13.TabIndex = 96;
             this.label13.Text = "Fecha Nacimiento";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label15
             // 
@@ -239,15 +271,15 @@ namespace SistemaMediar.Presentacion
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(9, 256);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(57, 15);
+            this.label15.Size = new System.Drawing.Size(32, 15);
             this.label15.TabIndex = 93;
-            this.label15.Text = "Dni   (F3)";
+            this.label15.Text = "Dni  ";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(162, 260);
+            this.label16.Location = new System.Drawing.Point(156, 257);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(58, 15);
             this.label16.TabIndex = 94;
@@ -404,9 +436,9 @@ namespace SistemaMediar.Presentacion
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(6, 121);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 15);
+            this.label10.Size = new System.Drawing.Size(32, 15);
             this.label10.TabIndex = 80;
-            this.label10.Text = "Dni   (F3)";
+            this.label10.Text = "Dni  ";
             // 
             // label11
             // 
@@ -424,9 +456,9 @@ namespace SistemaMediar.Presentacion
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(9, 222);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 15);
+            this.label3.Size = new System.Drawing.Size(35, 15);
             this.label3.TabIndex = 76;
-            this.label3.Text = "Cantidad Hijos";
+            this.label3.Text = "Hijos";
             // 
             // checkBox1
             // 
@@ -493,13 +525,13 @@ namespace SistemaMediar.Presentacion
             this.txtdescripcion.BorderSize = 2;
             this.txtdescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdescripcion.ForeColor = System.Drawing.Color.Black;
-            this.txtdescripcion.Location = new System.Drawing.Point(271, 28);
+            this.txtdescripcion.Location = new System.Drawing.Point(296, 28);
             this.txtdescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtdescripcion.Multiline = false;
             this.txtdescripcion.Name = "txtdescripcion";
             this.txtdescripcion.Padding = new System.Windows.Forms.Padding(5);
             this.txtdescripcion.PasswordChar = false;
-            this.txtdescripcion.Size = new System.Drawing.Size(261, 26);
+            this.txtdescripcion.Size = new System.Drawing.Size(236, 26);
             this.txtdescripcion.TabIndex = 66;
             this.txtdescripcion.Texts = "";
             this.txtdescripcion.UnderlinedStyle = false;
@@ -508,7 +540,7 @@ namespace SistemaMediar.Presentacion
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(95, 4);
+            this.label5.Location = new System.Drawing.Point(117, 8);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 16);
             this.label5.TabIndex = 65;
@@ -520,9 +552,9 @@ namespace SistemaMediar.Presentacion
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(3, 4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 15);
+            this.label7.Size = new System.Drawing.Size(99, 15);
             this.label7.TabIndex = 64;
-            this.label7.Text = "Codigo  (F3)";
+            this.label7.Text = "Documento  (F3)";
             // 
             // txtmateria
             // 
@@ -532,7 +564,7 @@ namespace SistemaMediar.Presentacion
             this.txtmateria.BorderSize = 2;
             this.txtmateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmateria.ForeColor = System.Drawing.Color.Black;
-            this.txtmateria.Location = new System.Drawing.Point(92, 28);
+            this.txtmateria.Location = new System.Drawing.Point(105, 28);
             this.txtmateria.Margin = new System.Windows.Forms.Padding(4);
             this.txtmateria.Multiline = false;
             this.txtmateria.Name = "txtmateria";
@@ -658,25 +690,6 @@ namespace SistemaMediar.Presentacion
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // txtdnihijo
-            // 
-            this.txtdnihijo.BackColor = System.Drawing.SystemColors.Window;
-            this.txtdnihijo.BorderColor = System.Drawing.Color.Green;
-            this.txtdnihijo.BorderFocusColor = System.Drawing.Color.DarkGreen;
-            this.txtdnihijo.BorderSize = 2;
-            this.txtdnihijo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdnihijo.ForeColor = System.Drawing.Color.Black;
-            this.txtdnihijo.Location = new System.Drawing.Point(9, 275);
-            this.txtdnihijo.Margin = new System.Windows.Forms.Padding(5);
-            this.txtdnihijo.Multiline = false;
-            this.txtdnihijo.Name = "txtdnihijo";
-            this.txtdnihijo.Padding = new System.Windows.Forms.Padding(5);
-            this.txtdnihijo.PasswordChar = false;
-            this.txtdnihijo.Size = new System.Drawing.Size(72, 27);
-            this.txtdnihijo.TabIndex = 98;
-            this.txtdnihijo.Texts = "";
-            this.txtdnihijo.UnderlinedStyle = false;
-            // 
             // FrmNuevoCaso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -747,5 +760,6 @@ namespace SistemaMediar.Presentacion
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label6;
         private Control.RjTexboxt txtdnihijo;
+        private System.Windows.Forms.Label label14;
     }
 }

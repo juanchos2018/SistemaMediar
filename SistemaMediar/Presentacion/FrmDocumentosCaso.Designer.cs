@@ -34,21 +34,21 @@ namespace SistemaMediar.Presentacion
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblcorreo = new System.Windows.Forms.Label();
             this.txtidconciliacion = new System.Windows.Forms.TextBox();
             this.txtfiltro = new SistemaMediar.Control.RjTexboxt();
-            this.lblcorreo = new System.Windows.Forms.Label();
-            this.lbltelefono = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnnuevocarpeta = new SistemaMediar.RJButton();
             this.rjButton2 = new SistemaMediar.RJButton();
             this.rjButton1 = new SistemaMediar.RJButton();
+            this.FlowLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.lbltelefono = new System.Windows.Forms.Label();
             this.lblnombres = new System.Windows.Forms.Label();
             this.lbldni = new System.Windows.Forms.Label();
-            this.FlowLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -97,6 +97,29 @@ namespace SistemaMediar.Presentacion
             this.panel5.TabIndex = 52;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lbltelefono);
+            this.groupBox1.Controls.Add(this.lblnombres);
+            this.groupBox1.Controls.Add(this.lbldni);
+            this.groupBox1.Controls.Add(this.lblcorreo);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(2, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(435, 88);
+            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Datos Cliente";
+            // 
+            // lblcorreo
+            // 
+            this.lblcorreo.AutoSize = true;
+            this.lblcorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcorreo.Location = new System.Drawing.Point(224, 33);
+            this.lblcorreo.Name = "lblcorreo";
+            this.lblcorreo.Size = new System.Drawing.Size(0, 20);
+            this.lblcorreo.TabIndex = 20;
+            // 
             // txtidconciliacion
             // 
             this.txtidconciliacion.Location = new System.Drawing.Point(351, 110);
@@ -125,25 +148,6 @@ namespace SistemaMediar.Presentacion
             this.txtfiltro.Texts = "";
             this.txtfiltro.UnderlinedStyle = false;
             this.txtfiltro._TextChanged += new System.EventHandler(this.txtfiltro__TextChanged);
-            // 
-            // lblcorreo
-            // 
-            this.lblcorreo.AutoSize = true;
-            this.lblcorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcorreo.Location = new System.Drawing.Point(224, 33);
-            this.lblcorreo.Name = "lblcorreo";
-            this.lblcorreo.Size = new System.Drawing.Size(0, 20);
-            this.lblcorreo.TabIndex = 20;
-            // 
-            // lbltelefono
-            // 
-            this.lbltelefono.AutoSize = true;
-            this.lbltelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltelefono.Location = new System.Drawing.Point(4, 66);
-            this.lbltelefono.Name = "lbltelefono";
-            this.lbltelefono.Size = new System.Drawing.Size(46, 18);
-            this.lbltelefono.TabIndex = 19;
-            this.lbltelefono.Text = "label2";
             // 
             // panel6
             // 
@@ -223,26 +227,6 @@ namespace SistemaMediar.Presentacion
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
-            // lblnombres
-            // 
-            this.lblnombres.AutoSize = true;
-            this.lblnombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombres.Location = new System.Drawing.Point(4, 40);
-            this.lblnombres.Name = "lblnombres";
-            this.lblnombres.Size = new System.Drawing.Size(46, 18);
-            this.lblnombres.TabIndex = 17;
-            this.lblnombres.Text = "label2";
-            // 
-            // lbldni
-            // 
-            this.lbldni.AutoSize = true;
-            this.lbldni.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldni.Location = new System.Drawing.Point(4, 16);
-            this.lbldni.Name = "lbldni";
-            this.lbldni.Size = new System.Drawing.Size(46, 18);
-            this.lbldni.TabIndex = 16;
-            this.lbldni.Text = "label1";
-            // 
             // FlowLayout
             // 
             this.FlowLayout.AutoScroll = true;
@@ -253,19 +237,35 @@ namespace SistemaMediar.Presentacion
             this.FlowLayout.Size = new System.Drawing.Size(875, 363);
             this.FlowLayout.TabIndex = 53;
             // 
-            // groupBox1
+            // lbltelefono
             // 
-            this.groupBox1.Controls.Add(this.lbldni);
-            this.groupBox1.Controls.Add(this.lblnombres);
-            this.groupBox1.Controls.Add(this.lbltelefono);
-            this.groupBox1.Controls.Add(this.lblcorreo);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(2, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(435, 88);
-            this.groupBox1.TabIndex = 23;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos Cliente";
+            this.lbltelefono.AutoSize = true;
+            this.lbltelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltelefono.Location = new System.Drawing.Point(6, 65);
+            this.lbltelefono.Name = "lbltelefono";
+            this.lbltelefono.Size = new System.Drawing.Size(51, 20);
+            this.lbltelefono.TabIndex = 23;
+            this.lbltelefono.Text = "label3";
+            // 
+            // lblnombres
+            // 
+            this.lblnombres.AutoSize = true;
+            this.lblnombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombres.Location = new System.Drawing.Point(6, 17);
+            this.lblnombres.Name = "lblnombres";
+            this.lblnombres.Size = new System.Drawing.Size(66, 24);
+            this.lblnombres.TabIndex = 21;
+            this.lblnombres.Text = "label1";
+            // 
+            // lbldni
+            // 
+            this.lbldni.AutoSize = true;
+            this.lbldni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldni.Location = new System.Drawing.Point(6, 42);
+            this.lbldni.Name = "lbldni";
+            this.lbldni.Size = new System.Drawing.Size(57, 20);
+            this.lbldni.TabIndex = 22;
+            this.lbldni.Text = "label2";
             // 
             // FrmDocumentosCaso
             // 
@@ -284,9 +284,9 @@ namespace SistemaMediar.Presentacion
             this.Load += new System.EventHandler(this.FrmDocumentosCaso_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -300,15 +300,15 @@ namespace SistemaMediar.Presentacion
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.FlowLayoutPanel FlowLayout;
         private RJButton rjButton1;
-        private System.Windows.Forms.Label lblnombres;
-        private System.Windows.Forms.Label lbldni;
         private System.Windows.Forms.Panel panel6;
         private RJButton btnnuevocarpeta;
         private RJButton rjButton2;
         private System.Windows.Forms.Label lblcorreo;
-        private System.Windows.Forms.Label lbltelefono;
         private Control.RjTexboxt txtfiltro;
         private System.Windows.Forms.TextBox txtidconciliacion;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lbltelefono;
+        private System.Windows.Forms.Label lblnombres;
+        private System.Windows.Forms.Label lbldni;
     }
 }

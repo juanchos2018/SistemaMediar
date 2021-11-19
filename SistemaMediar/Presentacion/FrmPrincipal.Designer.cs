@@ -30,6 +30,7 @@ namespace SistemaMediar.Presentacion
         private void InitializeComponent()
         {
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.btncarpetas2 = new System.Windows.Forms.Button();
             this.btnapumtes = new System.Windows.Forms.Button();
             this.btncarpetas = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@ namespace SistemaMediar.Presentacion
             this.pnlcontenedor = new System.Windows.Forms.Panel();
             this.pnltop = new System.Windows.Forms.Panel();
             this.lbltipoformulario = new System.Windows.Forms.Label();
-            this.btncarpetas2 = new System.Windows.Forms.Button();
             this.pnlSidebar.SuspendLayout();
             this.pnltop.SuspendLayout();
             this.SuspendLayout();
@@ -58,13 +58,28 @@ namespace SistemaMediar.Presentacion
             this.pnlSidebar.Size = new System.Drawing.Size(226, 522);
             this.pnlSidebar.TabIndex = 0;
             // 
+            // btncarpetas2
+            // 
+            this.btncarpetas2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btncarpetas2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncarpetas2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncarpetas2.ForeColor = System.Drawing.Color.White;
+            this.btncarpetas2.Location = new System.Drawing.Point(-3, 389);
+            this.btncarpetas2.Name = "btncarpetas2";
+            this.btncarpetas2.Size = new System.Drawing.Size(226, 41);
+            this.btncarpetas2.TabIndex = 6;
+            this.btncarpetas2.Text = "Carpetas";
+            this.btncarpetas2.UseVisualStyleBackColor = false;
+            this.btncarpetas2.Click += new System.EventHandler(this.btncarpetas2_Click);
+            // 
             // btnapumtes
             // 
             this.btnapumtes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnapumtes.FlatAppearance.BorderSize = 0;
             this.btnapumtes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnapumtes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnapumtes.ForeColor = System.Drawing.Color.White;
-            this.btnapumtes.Location = new System.Drawing.Point(0, 329);
+            this.btnapumtes.Location = new System.Drawing.Point(0, 288);
             this.btnapumtes.Name = "btnapumtes";
             this.btnapumtes.Size = new System.Drawing.Size(226, 41);
             this.btnapumtes.TabIndex = 5;
@@ -75,6 +90,7 @@ namespace SistemaMediar.Presentacion
             // btncarpetas
             // 
             this.btncarpetas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btncarpetas.FlatAppearance.BorderSize = 0;
             this.btncarpetas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncarpetas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncarpetas.ForeColor = System.Drawing.Color.White;
@@ -89,6 +105,7 @@ namespace SistemaMediar.Presentacion
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -103,6 +120,7 @@ namespace SistemaMediar.Presentacion
             // btnclientes
             // 
             this.btnclientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnclientes.FlatAppearance.BorderSize = 0;
             this.btnclientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnclientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclientes.ForeColor = System.Drawing.Color.White;
@@ -117,6 +135,7 @@ namespace SistemaMediar.Presentacion
             // btnincio
             // 
             this.btnincio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnincio.FlatAppearance.BorderSize = 0;
             this.btnincio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnincio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnincio.ForeColor = System.Drawing.Color.White;
@@ -154,20 +173,6 @@ namespace SistemaMediar.Presentacion
             this.lbltipoformulario.Size = new System.Drawing.Size(76, 25);
             this.lbltipoformulario.TabIndex = 0;
             this.lbltipoformulario.Text = "label1";
-            // 
-            // btncarpetas2
-            // 
-            this.btncarpetas2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btncarpetas2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncarpetas2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncarpetas2.ForeColor = System.Drawing.Color.White;
-            this.btncarpetas2.Location = new System.Drawing.Point(0, 282);
-            this.btncarpetas2.Name = "btncarpetas2";
-            this.btncarpetas2.Size = new System.Drawing.Size(226, 41);
-            this.btncarpetas2.TabIndex = 6;
-            this.btncarpetas2.Text = "Carpetas";
-            this.btncarpetas2.UseVisualStyleBackColor = false;
-            this.btncarpetas2.Click += new System.EventHandler(this.btncarpetas2_Click);
             // 
             // FrmPrincipal
             // 

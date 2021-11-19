@@ -147,7 +147,9 @@ namespace SistemaMediar.Dialogo
 
         private void cbomaterias_SelectionChangeCommitted(object sender, EventArgs e)
         {
-          //  CargarDgv((int)cbomaterias.SelectedValue);
+            //  CargarDgv((int)cbomaterias.SelectedValue);
+            CargarDgvFiles(Convert.ToInt32(cbomaterias.SelectedValue));
+
         }
     }
 }

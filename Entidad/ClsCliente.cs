@@ -64,6 +64,7 @@ namespace Entidad
             return sql.ProcedureSQL("Str_Cliente_S1", parametros, valores, tipoParametro, 1).Tables[0];
 
         }
+
         public DataTable TotalCliente(ClsCliente d)
         {
             sql.Asignar_Servidor("WIN10X64-121120", "sa", "123456", "BdFiles");
@@ -110,6 +111,7 @@ namespace Entidad
                 d.ApellidoCliente =  dt.Rows[0]["ApellidoCliente"].ToString();
                 d.CelularCliente = dt.Rows[0]["CelularCliente"].ToString();
                 d.CorreoCliente = dt.Rows[0]["CorreoCliente"].ToString();
+                d.DireccionCliente = dt.Rows[0]["DireccionCliente"].ToString();
                 d.Pais =  dt.Rows[0]["PaisCliente"].ToString();
             }
             else
@@ -119,10 +121,22 @@ namespace Entidad
                 d.ApellidoCliente = null;
                 d.CelularCliente = null;
                 d.CorreoCliente = null;
+                d.DireccionCliente = null;
                 d.Pais = null;             
                              
             }
             return d;
+        }
+
+
+        public void Actualizar(ClsCliente d)
+        {
+            sql.Asignar_Servidor("WIN10X64-121120", "sa", "123456", "BdFiles");
+            string[] parametros = new[] { "@IdEmpresa", "@DniCliente", "@Nombre", "@Apellido", "@Celular", "@Direccion", "@Correo" };
+            SqlDbType[] tipoParametro = new[] { SqlDbType.Int, SqlDbType.VarChar, SqlDbType.VarChar, SqlDbType.VarChar, SqlDbType.VarChar, SqlDbType.VarChar, SqlDbType.VarChar };
+            object[] valores = { d.IdEmpresa, d.DniCliente, d.NombreCliente,d.ApellidoCliente,d.CelularCliente,d.DireccionCliente,d.CorreoCliente };
+            sql.ProcedureSQL("Str_Cliente_U", parametros, valores, tipoParametro, 7);
+
         }
 
     }

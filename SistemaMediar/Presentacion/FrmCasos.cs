@@ -32,7 +32,8 @@ namespace SistemaMediar.Presentacion
         {
             FrmPrincipal f = FrmPrincipal.GetInstancia();
             f.PonerTexto("Registrar Nuevo Caso");
-            f.Abrir(new FrmNuevoCaso2());
+          //  f.Abrir(new FrmNuevoCaso2());
+            f.Abrir(new FrmNuevoCaso());
         }
 
         private void ListarCasos()
@@ -93,6 +94,27 @@ namespace SistemaMediar.Presentacion
         private void dgvCasos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtfiltro__TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtfiltro.Texts.Length > 0)
+                {
+                    // dt.RowFilter = "Nombre like '%" + txtfilro.text + "%' ";
+                    datafilter.RowFilter = " Nombre like '%" + txtfiltro.Texts + "%' or Apellido like '%" + txtfiltro.Texts + "%'";
+                    // vcliente.RowFilter = " idcliente like '%" + TxtFiltrar.Text + "%' or Nombre like '%" + TxtFiltrar.Text + "%'";           
+                }
+                else
+                {
+                    datafilter.RowFilter = "";
+                }
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

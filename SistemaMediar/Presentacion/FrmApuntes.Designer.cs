@@ -275,6 +275,7 @@ namespace SistemaMediar.Presentacion
             this.dgvApuntes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgvApuntes.Size = new System.Drawing.Size(519, 474);
             this.dgvApuntes.TabIndex = 67;
+            this.dgvApuntes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvApuntes_CellContentClick);
             // 
             // FrmApuntes
             // 

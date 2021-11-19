@@ -36,9 +36,9 @@ namespace SistemaMediar.Presentacion
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.dgv2 = new System.Windows.Forms.DataGridView();
             this.txtfiltro = new SistemaMediar.Control.RjTexboxt();
             this.rjButton2 = new SistemaMediar.RJButton();
+            this.dgv2 = new System.Windows.Forms.DataGridView();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
             this.SuspendLayout();
@@ -76,6 +76,48 @@ namespace SistemaMediar.Presentacion
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(885, 53);
             this.panel5.TabIndex = 38;
+            // 
+            // txtfiltro
+            // 
+            this.txtfiltro.BackColor = System.Drawing.SystemColors.Window;
+            this.txtfiltro.BorderColor = System.Drawing.Color.Green;
+            this.txtfiltro.BorderFocusColor = System.Drawing.Color.DarkGreen;
+            this.txtfiltro.BorderSize = 2;
+            this.txtfiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfiltro.ForeColor = System.Drawing.Color.Black;
+            this.txtfiltro.Location = new System.Drawing.Point(7, 14);
+            this.txtfiltro.Margin = new System.Windows.Forms.Padding(4);
+            this.txtfiltro.Multiline = false;
+            this.txtfiltro.Name = "txtfiltro";
+            this.txtfiltro.Padding = new System.Windows.Forms.Padding(7);
+            this.txtfiltro.PasswordChar = false;
+            this.txtfiltro.Size = new System.Drawing.Size(312, 31);
+            this.txtfiltro.TabIndex = 12;
+            this.txtfiltro.Texts = "";
+            this.txtfiltro.UnderlinedStyle = false;
+            this.txtfiltro._TextChanged += new System.EventHandler(this.txtfiltro__TextChanged);
+            // 
+            // rjButton2
+            // 
+            this.rjButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rjButton2.BackColor = System.Drawing.Color.Green;
+            this.rjButton2.BackgroundColor = System.Drawing.Color.Green;
+            this.rjButton2.BorderColor = System.Drawing.Color.Green;
+            this.rjButton2.BorderRadius = 15;
+            this.rjButton2.BorderSize = 2;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton2.ForeColor = System.Drawing.Color.LightYellow;
+            this.rjButton2.Location = new System.Drawing.Point(688, 6);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Size = new System.Drawing.Size(193, 40);
+            this.rjButton2.TabIndex = 11;
+            this.rjButton2.Text = "Nuevo Cliente";
+            this.rjButton2.TextColor = System.Drawing.Color.LightYellow;
+            this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // dgv2
             // 
@@ -122,48 +164,6 @@ namespace SistemaMediar.Presentacion
             this.dgv2.TabIndex = 39;
             this.dgv2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv2_CellClick);
             this.dgv2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv2_CellContentClick);
-            // 
-            // txtfiltro
-            // 
-            this.txtfiltro.BackColor = System.Drawing.SystemColors.Window;
-            this.txtfiltro.BorderColor = System.Drawing.Color.Green;
-            this.txtfiltro.BorderFocusColor = System.Drawing.Color.DarkGreen;
-            this.txtfiltro.BorderSize = 2;
-            this.txtfiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfiltro.ForeColor = System.Drawing.Color.Black;
-            this.txtfiltro.Location = new System.Drawing.Point(7, 12);
-            this.txtfiltro.Margin = new System.Windows.Forms.Padding(4);
-            this.txtfiltro.Multiline = false;
-            this.txtfiltro.Name = "txtfiltro";
-            this.txtfiltro.Padding = new System.Windows.Forms.Padding(7);
-            this.txtfiltro.PasswordChar = false;
-            this.txtfiltro.Size = new System.Drawing.Size(312, 31);
-            this.txtfiltro.TabIndex = 12;
-            this.txtfiltro.Texts = "";
-            this.txtfiltro.UnderlinedStyle = false;
-            this.txtfiltro._TextChanged += new System.EventHandler(this.txtfiltro__TextChanged);
-            // 
-            // rjButton2
-            // 
-            this.rjButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjButton2.BackColor = System.Drawing.Color.Green;
-            this.rjButton2.BackgroundColor = System.Drawing.Color.Green;
-            this.rjButton2.BorderColor = System.Drawing.Color.Green;
-            this.rjButton2.BorderRadius = 15;
-            this.rjButton2.BorderSize = 2;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton2.ForeColor = System.Drawing.Color.LightYellow;
-            this.rjButton2.Location = new System.Drawing.Point(674, 6);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(193, 40);
-            this.rjButton2.TabIndex = 11;
-            this.rjButton2.Text = "Nuevo Cliente";
-            this.rjButton2.TextColor = System.Drawing.Color.LightYellow;
-            this.rjButton2.UseVisualStyleBackColor = false;
-            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // FrmClientes
             // 

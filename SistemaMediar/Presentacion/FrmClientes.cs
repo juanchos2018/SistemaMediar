@@ -1,4 +1,5 @@
 ﻿using Entidad;
+using SistemaMediar.Dialogo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -115,17 +116,37 @@ namespace SistemaMediar.Presentacion
             {
 
             }
-           }
+         }
 
         private void dgv2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (this.dgv2.Columns[e.ColumnIndex].Name == "Ver")
+
+            if (this.dgv2.Columns[e.ColumnIndex].Name == "Editar")
             {
-               // string nombre = this.dgv2.CurrentRow.Cells["Nombre"].Value.ToString();
+                // string nombre = this.dgv2.CurrentRow.Cells["Nombre"].Value.ToString();
                 string dniCliente = this.dgv2.CurrentRow.Cells["DniCliente"].Value.ToString();
                 FrmPrincipal f = FrmPrincipal.GetInstancia();
+                f.Abrir(new FrmClienteEditar(dniCliente));
+            }
 
+           else if (this.dgv2.Columns[e.ColumnIndex].Name == "Ver")
+            {
+                string dniCliente = this.dgv2.CurrentRow.Cells["DniCliente"].Value.ToString();
+                FrmPrincipal f = FrmPrincipal.GetInstancia();
                 f.Abrir(new FrmDetalleCliente(dniCliente));
+            }
+
+            else if (this.dgv2.Columns[e.ColumnIndex].Name == "Borrar")
+            {
+                string dniCliente = this.dgv2.CurrentRow.Cells["DniCliente"].Value.ToString();
+                string nombreCliente = this.dgv2.CurrentRow.Cells["Nombre"].Value.ToString();
+
+                DlgMensaje dlgmen = new DlgMensaje();
+                dlgmen.Nombre = nombreCliente;
+                dlgmen.ShowDialog();
+
+                ///  FrmPrincipal f = FrmPrincipal.GetInstancia();
+                //  f.Abrir(new FrmDetalleCliente(dniCliente));
             }
         }
 

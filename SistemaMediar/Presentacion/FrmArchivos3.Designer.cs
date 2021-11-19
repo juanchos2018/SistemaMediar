@@ -125,6 +125,7 @@ namespace SistemaMediar.Presentacion
             this.btnnuevocarpeta.Text = "Nuevo Archivo";
             this.btnnuevocarpeta.TextColor = System.Drawing.Color.LightYellow;
             this.btnnuevocarpeta.UseVisualStyleBackColor = false;
+            this.btnnuevocarpeta.Click += new System.EventHandler(this.btnnuevocarpeta_Click);
             // 
             // rjButton1
             // 

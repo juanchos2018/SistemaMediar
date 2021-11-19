@@ -104,7 +104,7 @@ namespace SistemaMediar.Presentacion
             WebArchivos client = new WebArchivos();
             String path = FullPath;
             var resul = client.SubirArchivos(path, 4, con.DniCliente);
-            MessageBox.Show(resul);
+           // MessageBox.Show(resul);
             string pathDocument = resul;
             if (File.Exists(pathDocument))
             {
@@ -139,8 +139,8 @@ namespace SistemaMediar.Presentacion
                 doc.ReplaceText("NOMBREHIJO1", txtnombrehijo1.Texts);
                 doc.ReplaceText("EDAD", txtedadhijo.Texts);
                 doc.ReplaceText("FECHANACIMIENTO", ftfechanacimiento1.ToString());
-
                 doc.SaveAs(pathDocument);
+
                 if (mensaje.ShowDialog() == DialogResult.OK)
                 {
                     panel7.BackColor = System.Drawing.Color.White;
@@ -152,8 +152,7 @@ namespace SistemaMediar.Presentacion
         private void rjButton1_Click(object sender, EventArgs e)
         {
             FrmPrincipal f = FrmPrincipal.GetInstancia();
-            f.Abrir(new FrmCasos());
-           
+            f.Abrir(new FrmCasos());          
 
         }
 
@@ -225,8 +224,7 @@ namespace SistemaMediar.Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            byte[] file = File.ReadAllBytes("D:\\DocxExample\\pdfprueba.pdf");  
-            
+            byte[] file = File.ReadAllBytes("D:\\DocxExample\\pdfprueba.pdf");              
 
             MemoryStream stream = new MemoryStream(file);        
             if (stream != null)
@@ -264,6 +262,11 @@ namespace SistemaMediar.Presentacion
         }
 
         private void txtdireccion__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
         {
 
         }

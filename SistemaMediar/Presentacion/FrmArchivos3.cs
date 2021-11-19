@@ -16,5 +16,10 @@ namespace SistemaMediar.Presentacion
         {
             InitializeComponent();
         }
+
+        private void btnnuevocarpeta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -62,12 +62,11 @@ C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\bin\Debug\SautinSoft.D
 C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\bin\Debug\SautinSoft.Document.xml
 C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\bin\Debug\Newtonsoft.Json.dll
 C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\bin\Debug\Newtonsoft.Json.xml
-C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\bin\Debug\Calendar.NET.dll
-C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\bin\Debug\Calendar.NET.pdb
-C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\bin\Debug\Calendar.NET.xml
 C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\obj\Debug\SistemaMediar.Control.ControlCarpeta2.resources
 C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\obj\Debug\SistemaMediar.Presentacion.FrmArchivos2.resources
 C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\obj\Debug\SistemaMediar.Control.ControlArchivo2.resources
 C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\obj\Debug\SistemaMediar.Presentacion.FrmArchivos3.resources
 C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\obj\Debug\SistemaMediar.Presentacion.FrmNuevoCaso2.resources
 C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\obj\Debug\SistemaMediar.Dialogo.DlgNuevoCliente.resources
+C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\obj\Debug\SistemaMediar.Sunat.PruebaSunat.resources
+C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\obj\Debug\SistemaMediar.Presentacion.FrmClienteEditar.resources

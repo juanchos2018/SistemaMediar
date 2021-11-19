@@ -176,5 +176,10 @@ namespace SistemaMediar.Presentacion
                 }
             }
         }
+
+        private void btnCarpeta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

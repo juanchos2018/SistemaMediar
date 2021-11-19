@@ -41,7 +41,7 @@ namespace SistemaMediar.Presentacion
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbltotalcasos = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,7 +51,6 @@ namespace SistemaMediar.Presentacion
             this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.calendar1 = new Calendar.NET.Calendar();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pnltop.SuspendLayout();
@@ -117,9 +116,9 @@ namespace SistemaMediar.Presentacion
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(12, 25);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 45);
+            this.label7.Size = new System.Drawing.Size(44, 45);
             this.label7.TabIndex = 3;
-            this.label7.Text = "12";
+            this.label7.Text = "0";
             // 
             // panel4
             // 
@@ -160,16 +159,16 @@ namespace SistemaMediar.Presentacion
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(12, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 45);
+            this.label5.Size = new System.Drawing.Size(44, 45);
             this.label5.TabIndex = 3;
-            this.label5.Text = "12";
+            this.label5.Text = "0";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.GreenYellow;
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.lbltotalcasos);
             this.panel3.Location = new System.Drawing.Point(238, 5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(214, 111);
@@ -182,9 +181,9 @@ namespace SistemaMediar.Presentacion
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(17, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 24);
+            this.label2.Size = new System.Drawing.Size(62, 24);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Clientes";
+            this.label2.Text = "Casos";
             // 
             // pictureBox2
             // 
@@ -196,16 +195,16 @@ namespace SistemaMediar.Presentacion
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // label3
+            // lbltotalcasos
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Swis721 Blk BT", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 45);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "12";
+            this.lbltotalcasos.AutoSize = true;
+            this.lbltotalcasos.Font = new System.Drawing.Font("Swis721 Blk BT", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltotalcasos.ForeColor = System.Drawing.Color.White;
+            this.lbltotalcasos.Location = new System.Drawing.Point(12, 25);
+            this.lbltotalcasos.Name = "lbltotalcasos";
+            this.lbltotalcasos.Size = new System.Drawing.Size(44, 45);
+            this.lbltotalcasos.TabIndex = 3;
+            this.lbltotalcasos.Text = "0";
             // 
             // panel1
             // 
@@ -247,9 +246,9 @@ namespace SistemaMediar.Presentacion
             this.lbltotalclientes.ForeColor = System.Drawing.Color.White;
             this.lbltotalclientes.Location = new System.Drawing.Point(12, 25);
             this.lbltotalclientes.Name = "lbltotalclientes";
-            this.lbltotalclientes.Size = new System.Drawing.Size(68, 45);
+            this.lbltotalclientes.Size = new System.Drawing.Size(44, 45);
             this.lbltotalclientes.TabIndex = 3;
-            this.lbltotalclientes.Text = "12";
+            this.lbltotalclientes.Text = "0";
             // 
             // panel6
             // 
@@ -299,7 +298,6 @@ namespace SistemaMediar.Presentacion
             // panel7
             // 
             this.panel7.Controls.Add(this.panel2);
-            this.panel7.Controls.Add(this.calendar1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 197);
             this.panel7.Name = "panel7";
@@ -313,33 +311,6 @@ namespace SistemaMediar.Presentacion
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(10, 370);
             this.panel2.TabIndex = 11;
-            // 
-            // calendar1
-            // 
-            this.calendar1.AllowEditingEvents = true;
-            this.calendar1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.calendar1.CalendarDate = new System.DateTime(2021, 7, 13, 23, 55, 42, 680);
-            this.calendar1.CalendarView = Calendar.NET.CalendarViews.Month;
-            this.calendar1.DateHeaderFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.calendar1.DayOfWeekFont = new System.Drawing.Font("Arial", 10F);
-            this.calendar1.DaysFont = new System.Drawing.Font("Arial", 10F);
-            this.calendar1.DayViewTimeFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.calendar1.DimDisabledEvents = true;
-            this.calendar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.calendar1.HighlightCurrentDay = true;
-            this.calendar1.LoadPresetHolidays = true;
-            this.calendar1.Location = new System.Drawing.Point(0, 0);
-            this.calendar1.Name = "calendar1";
-            this.calendar1.ShowArrowControls = true;
-            this.calendar1.ShowDashedBorderOnDisabledEvents = true;
-            this.calendar1.ShowDateInHeader = true;
-            this.calendar1.ShowDisabledEvents = false;
-            this.calendar1.ShowEventTooltips = true;
-            this.calendar1.ShowTodayButton = true;
-            this.calendar1.Size = new System.Drawing.Size(656, 370);
-            this.calendar1.TabIndex = 0;
-            this.calendar1.TodayFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.calendar1.Load += new System.EventHandler(this.calendar1_Load_1);
             // 
             // panel8
             // 
@@ -401,7 +372,7 @@ namespace SistemaMediar.Presentacion
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbltotalcasos;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -416,7 +387,7 @@ namespace SistemaMediar.Presentacion
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
-        private Calendar.NET.Calendar calendar1;
+       // private Calendar.NET.Calendar calendar1;
         private System.Windows.Forms.Panel panel2;
     }
 }

@@ -24,11 +24,9 @@ namespace Entidad
         public void Agregar(ClsArchivo d)
         {
             sql.Asignar_Servidor("WIN10X64-121120", "sa", "123456", "BdFiles");
-
             string[] parametros = new[] { "@IdCarpeta", "@IdEmpresa", "@NombreArchivo", "@Tipo", "@Size", "@Estado", "@RutaServidor", "@FechaRegistro" };
             SqlDbType[] tipoParametro = new SqlDbType[] { SqlDbType.Int, SqlDbType.Int, SqlDbType.VarChar, SqlDbType.VarChar,SqlDbType.Int, SqlDbType.VarChar, SqlDbType.VarChar, SqlDbType.Date };
             object[] valores = { d.IdCarpeta, d.IdEmpresa, d.NombreArchivo, d.Tipo,d.Size, d.Estado, d.RutaServidor, d.FechaRegistro };
-
             sql.EjecutarProcedure("Str_Archivo_I", parametros, valores, tipoParametro, 8);
 
         }
@@ -40,7 +38,6 @@ namespace Entidad
             SqlDbType[] tipoParametro = new[] { SqlDbType.Int, SqlDbType.Int };
             object[] valores = { d.IdEmpresa, d.IdCarpeta };
             return sql.ProcedureSQL("Str_Archivo_S", parametros, valores, tipoParametro, 2).Tables[0];
-
 
         }
         public DataTable ListaTodo(ClsArchivo d)

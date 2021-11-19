@@ -34,12 +34,11 @@ namespace SistemaMediar.Presentacion
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.FlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.txtfiltro = new SistemaMediar.Control.RjTexboxt();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.btnnuevocarpeta = new SistemaMediar.RJButton();
             this.rjButton1 = new SistemaMediar.RJButton();
-            this.btnCarpeta = new SistemaMediar.RJButton();
+            this.FlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
@@ -87,28 +86,6 @@ namespace SistemaMediar.Presentacion
             this.panel5.Size = new System.Drawing.Size(887, 51);
             this.panel5.TabIndex = 49;
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.btnCarpeta);
-            this.panel6.Controls.Add(this.btnnuevocarpeta);
-            this.panel6.Controls.Add(this.rjButton1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(432, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(455, 51);
-            this.panel6.TabIndex = 38;
-            // 
-            // FlowLayout
-            // 
-            this.FlowLayout.AutoScroll = true;
-            this.FlowLayout.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.FlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FlowLayout.Location = new System.Drawing.Point(22, 72);
-            this.FlowLayout.Name = "FlowLayout";
-            this.FlowLayout.Size = new System.Drawing.Size(887, 479);
-            this.FlowLayout.TabIndex = 50;
-            this.FlowLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.FlowLayout_Paint);
-            // 
             // txtfiltro
             // 
             this.txtfiltro.BackColor = System.Drawing.SystemColors.Window;
@@ -129,6 +106,16 @@ namespace SistemaMediar.Presentacion
             this.txtfiltro.UnderlinedStyle = false;
             this.txtfiltro._TextChanged += new System.EventHandler(this.txtfiltro__TextChanged);
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btnnuevocarpeta);
+            this.panel6.Controls.Add(this.rjButton1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(432, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(455, 51);
+            this.panel6.TabIndex = 38;
+            // 
             // btnnuevocarpeta
             // 
             this.btnnuevocarpeta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -142,7 +129,7 @@ namespace SistemaMediar.Presentacion
             this.btnnuevocarpeta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnnuevocarpeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnnuevocarpeta.ForeColor = System.Drawing.Color.LightYellow;
-            this.btnnuevocarpeta.Location = new System.Drawing.Point(3, 5);
+            this.btnnuevocarpeta.Location = new System.Drawing.Point(164, 5);
             this.btnnuevocarpeta.Name = "btnnuevocarpeta";
             this.btnnuevocarpeta.Size = new System.Drawing.Size(149, 40);
             this.btnnuevocarpeta.TabIndex = 45;
@@ -164,7 +151,7 @@ namespace SistemaMediar.Presentacion
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.LightYellow;
-            this.rjButton1.Location = new System.Drawing.Point(167, 5);
+            this.rjButton1.Location = new System.Drawing.Point(319, 5);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(130, 40);
             this.rjButton1.TabIndex = 44;
@@ -173,26 +160,16 @@ namespace SistemaMediar.Presentacion
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
-            // btnCarpeta
+            // FlowLayout
             // 
-            this.btnCarpeta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCarpeta.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnCarpeta.BackgroundColor = System.Drawing.Color.DodgerBlue;
-            this.btnCarpeta.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnCarpeta.BorderRadius = 15;
-            this.btnCarpeta.BorderSize = 2;
-            this.btnCarpeta.FlatAppearance.BorderSize = 0;
-            this.btnCarpeta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnCarpeta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCarpeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCarpeta.ForeColor = System.Drawing.Color.LightYellow;
-            this.btnCarpeta.Location = new System.Drawing.Point(317, 6);
-            this.btnCarpeta.Name = "btnCarpeta";
-            this.btnCarpeta.Size = new System.Drawing.Size(119, 40);
-            this.btnCarpeta.TabIndex = 46;
-            this.btnCarpeta.Text = "Carpeta";
-            this.btnCarpeta.TextColor = System.Drawing.Color.LightYellow;
-            this.btnCarpeta.UseVisualStyleBackColor = false;
+            this.FlowLayout.AutoScroll = true;
+            this.FlowLayout.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.FlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FlowLayout.Location = new System.Drawing.Point(22, 72);
+            this.FlowLayout.Name = "FlowLayout";
+            this.FlowLayout.Size = new System.Drawing.Size(887, 479);
+            this.FlowLayout.TabIndex = 50;
+            this.FlowLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.FlowLayout_Paint);
             // 
             // FrmArchivos
             // 
@@ -227,6 +204,5 @@ namespace SistemaMediar.Presentacion
         private System.Windows.Forms.FlowLayoutPanel FlowLayout;
         private RJButton btnnuevocarpeta;
         private Control.RjTexboxt txtfiltro;
-        private RJButton btnCarpeta;
     }
 }

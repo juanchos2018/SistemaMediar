@@ -26,5 +26,18 @@ namespace Entidad
             return sql.ProcedureSQL("Str_Casos_S", parametros, valores, tipoParametro, 2).Tables[0];
         }
 
+
+
+        public DataTable TotalCasos(ClsCasos d)
+        {
+            sql.Asignar_Servidor("WIN10X64-121120", "sa", "123456", "BdFiles");
+            string[] parametros = new[] { "@IdEmpresa" };
+            SqlDbType[] tipoParametro = new[] { SqlDbType.Int };
+            object[] valores = { d.IdEmpresa };
+            return sql.ProcedureSQL("TotalCasos", parametros, valores, tipoParametro, 1).Tables[0];
+
+        }
+
+
     }
 }

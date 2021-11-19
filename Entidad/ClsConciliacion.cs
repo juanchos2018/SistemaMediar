@@ -62,7 +62,7 @@ namespace Entidad
         public void Actualizar(ClsConciliacion d)
         {
             sql.Asignar_Servidor("WIN10X64-121120", "sa", "123456", "BdFiles");
-            string[] parametros = new[] { "@IdEmpresa", "@@IdConciliacion", "@Estado" };
+            string[] parametros = new[] { "@IdEmpresa", "@IdConciliacion", "@Estado" };
             SqlDbType[] tipoParametro = new[] { SqlDbType.Int, SqlDbType.Int, SqlDbType.VarChar };
             object[] valores = { d.IdEmpresa, d.IdConciliacion, d.Estado };
             sql.ProcedureSQL("Str_Conciliacion_U", parametros, valores, tipoParametro, 3);

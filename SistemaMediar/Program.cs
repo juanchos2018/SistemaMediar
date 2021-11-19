@@ -16,8 +16,9 @@ namespace SistemaMediar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Presentacion.FrmLogin());
+             Application.Run(new Presentacion.FrmLogin());
             //Application.Run(new Presentacion.FrmPrueba());
+           // Application.Run(new Sunat.PruebaSunat());
         }
     }
 }

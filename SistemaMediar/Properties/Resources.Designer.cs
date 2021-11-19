@@ -353,6 +353,16 @@ namespace SistemaMediar.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap userimg {
+            get {
+                object obj = ResourceManager.GetObject("userimg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ver1 {
             get {
                 object obj = ResourceManager.GetObject("ver1", resourceCulture);
