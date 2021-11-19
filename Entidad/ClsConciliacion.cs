@@ -76,5 +76,32 @@ namespace Entidad
             object[] valores = { d.IdEmpresa,d.DniCliente };
             return sql.ProcedureSQL("Str_ConciliacionCliente_S", parametros, valores, tipoParametro, 2).Tables[0];
         }
+
+        public ClsConciliacion Registro(ClsConciliacion d)
+        {
+            sql.Asignar_Servidor("WIN10X64-121120", "sa", "123456", "BdFiles");
+            string[] parametros = new[] { "@IdEmpresa", "@IdConciliacion" };
+            SqlDbType[] tipoParametro = new[] { SqlDbType.Int,SqlDbType.Int };
+            object[] valores =  { d.IdEmpresa,d.IdConciliacion };
+            DataTable dt = new DataTable();
+            dt = sql.ProcedureSQL("Str_Conciliacion_SS", parametros, valores, tipoParametro, 2).Tables[0];
+            if (dt.Rows.Count > 0)
+            {
+                 d.Titulo = dt.Rows[0]["Titulo"].ToString();
+                 d.Materia = dt.Rows[0]["Materia"].ToString();
+                 d.Estado = dt.Rows[0]["Estado"].ToString();
+             
+            }
+            else
+            {
+                d.Titulo = null;
+                d.Materia = null;
+                d.Estado = null;
+              
+
+            }
+            return d;
+        }
+
     }
 }

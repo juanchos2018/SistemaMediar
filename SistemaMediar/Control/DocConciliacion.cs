@@ -28,6 +28,9 @@ namespace SistemaMediar.Control
         private Image _icon;
         private string RutaServidor;
         private string Tipo;
+        private string CorreoCli;
+
+
 
         [Category("Custom Props")]
         public string Nombre
@@ -55,11 +58,22 @@ namespace SistemaMediar.Control
             get { return RutaFisica; }
             set { RutaFisica = value; }
         }
+
+
         [Category("Custom Props")]
         public string RutaServi
         {
             get { return RutaServidor; }
             set { RutaServidor = value; }
+        }
+
+
+
+        [Category("Custom Props")]
+        public string correo
+        {
+            get { return CorreoCli; }
+            set { CorreoCli = value; }
         }
 
         private void lblNombreArchivo_Click(object sender, EventArgs e)
@@ -94,6 +108,7 @@ namespace SistemaMediar.Control
         private void btncorreo_Click(object sender, EventArgs e)
         {
             DlgSendEmail dlgmen = new DlgSendEmail();
+            dlgmen.Correo = correo;
             dlgmen.ShowDialog();
         }
 

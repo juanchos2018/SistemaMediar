@@ -17,6 +17,9 @@ namespace SistemaMediar.Presentacion
             InitializeComponent();
         }
 
+        const string USUARIO= "admin";
+        const string PASSWORD = "123456";
+
         private void rjTexboxt1__TextChanged(object sender, EventArgs e)
         {
 
@@ -24,10 +27,24 @@ namespace SistemaMediar.Presentacion
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            FrmPrincipal f = FrmPrincipal.GetInstancia();
-            //Application.Run(Presentacion.FrmPrincipal.GetInstancia());
-            f.Show();
-            this.Hide();
+            if (txtusuario.Texts==USUARIO && txtclave.Texts==PASSWORD)
+            {
+                FrmPrincipal f = FrmPrincipal.GetInstancia();
+                //Application.Run(Presentacion.FrmPrincipal.GetInstancia());
+                f.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Datos incorrectos");
+            }
+          
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            txtclave.Texts = "123456";
+            txtusuario.Texts = "admin";
         }
     }
 }

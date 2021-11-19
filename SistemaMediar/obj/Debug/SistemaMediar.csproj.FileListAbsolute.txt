@@ -70,3 +70,6 @@ C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\obj\Debug\SistemaMedia
 C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\obj\Debug\SistemaMediar.Dialogo.DlgNuevoCliente.resources
 C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\obj\Debug\SistemaMediar.Sunat.PruebaSunat.resources
 C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\obj\Debug\SistemaMediar.Presentacion.FrmClienteEditar.resources
+C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\bin\Debug\Calendar.NET.dll
+C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\bin\Debug\Calendar.NET.pdb
+C:\Users\usuario\source\repos\SistemaMediar\SistemaMediar\bin\Debug\Calendar.NET.xml

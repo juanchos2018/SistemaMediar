@@ -1,4 +1,5 @@
 ﻿//using Calendar.NET;
+using Calendar.NET;
 using Entidad;
 using System;
 using System.Collections.Generic;
@@ -29,8 +30,14 @@ namespace SistemaMediar.Presentacion
 
             HoyDia();
             ListarEventos();
+
             TotalClientes();
             TotalCasos();
+
+            calendar1.CalendarDate = new DateTime(2021, 5, 2, 0, 0, 0);
+            calendar1.CalendarView = CalendarViews.Month;
+            calendar1.AllowEditingEvents = true;
+
 
         }
 
@@ -94,30 +101,30 @@ namespace SistemaMediar.Presentacion
         }
         private void ListarEventos()
         {
-            ////ClsApuntes apuntes = new ClsApuntes();
-            ////apuntes.IdEmpresa = 4;         
-            //// DataTable data = apuntes.Lista1(apuntes);
-            ////for (int i = 0; i < data.Rows.Count; i++)
-            ////{
-            ////    var ce = new CustomEvent();
-            ////    ce.EventText = data.Rows[i]["Titulo"].ToString(); 
-            ////    ce.Date = DateTime.Parse( data.Rows[i]["FechaRegistro"].ToString());
-            ////    ce.RecurringFrequency = RecurringFrequencies.Yearly;            
-            ////    if (data.Rows[i]["Tipo"].ToString().Equals("Audiencia"))
-            ////    {
-            ////        ce.EventColor = ColorTranslator.FromHtml("#2E8B57");
-            ////    }
-            ////    else if (data.Rows[i]["Tipo"].ToString().Equals("Reunion"))
-            ////    {
-            ////        ce.EventColor = ColorTranslator.FromHtml("#0522C8");
-            ////    }
-            ////    else
-            ////    {
-            ////        ce.EventColor = ColorTranslator.FromHtml("#080809");
-            ////    }
-            ////    calendar1.AddEvent(ce);
-            ////}
-          
+            ClsApuntes apuntes = new ClsApuntes();
+            apuntes.IdEmpresa = 4;
+            DataTable data = apuntes.Lista1(apuntes);
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+                var ce = new CustomEvent();
+                ce.EventText = data.Rows[i]["Titulo"].ToString();
+                ce.Date = DateTime.Parse(data.Rows[i]["FechaRegistro"].ToString());
+                ce.RecurringFrequency = RecurringFrequencies.Yearly;
+                if (data.Rows[i]["Tipo"].ToString().Equals("Audiencia"))
+                {
+                    ce.EventColor = ColorTranslator.FromHtml("#2E8B57");
+                }
+                else if (data.Rows[i]["Tipo"].ToString().Equals("Reunion"))
+                {
+                    ce.EventColor = ColorTranslator.FromHtml("#0522C8");
+                }
+                else
+                {
+                    ce.EventColor = ColorTranslator.FromHtml("#080809");
+                }
+                calendar1.AddEvent(ce);
+            }
+
         }
         private void SelectedCalendar()
         {

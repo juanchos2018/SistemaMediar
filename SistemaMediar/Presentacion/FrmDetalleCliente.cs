@@ -38,6 +38,7 @@ namespace SistemaMediar.Presentacion
             lbltelefono.Text = cli.CelularCliente;
             lbldni.Text = cli.DniCliente;
             txtdniciente.Visible = false;
+            lblcorreo.Text = cli.CorreoCliente;
 
         }
 

@@ -40,7 +40,7 @@ namespace SistemaMediar.Dialogo
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtnombrecarpeta = new SistemaMediar.Control.RjTexboxt();
+            this.txtcorreo = new SistemaMediar.Control.RjTexboxt();
             this.rjButton1 = new SistemaMediar.RJButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
@@ -127,7 +127,7 @@ namespace SistemaMediar.Dialogo
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.txtnombrecarpeta);
+            this.panel2.Controls.Add(this.txtcorreo);
             this.panel2.Controls.Add(this.rjButton1);
             this.panel2.Controls.Add(this.btnenviar);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -177,25 +177,25 @@ namespace SistemaMediar.Dialogo
             this.panel3.Size = new System.Drawing.Size(5, 185);
             this.panel3.TabIndex = 44;
             // 
-            // txtnombrecarpeta
+            // txtcorreo
             // 
-            this.txtnombrecarpeta.BackColor = System.Drawing.SystemColors.Window;
-            this.txtnombrecarpeta.BorderColor = System.Drawing.Color.Green;
-            this.txtnombrecarpeta.BorderFocusColor = System.Drawing.Color.DarkGreen;
-            this.txtnombrecarpeta.BorderSize = 2;
-            this.txtnombrecarpeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnombrecarpeta.ForeColor = System.Drawing.Color.DimGray;
-            this.txtnombrecarpeta.Location = new System.Drawing.Point(157, 66);
-            this.txtnombrecarpeta.Margin = new System.Windows.Forms.Padding(4);
-            this.txtnombrecarpeta.Multiline = false;
-            this.txtnombrecarpeta.Name = "txtnombrecarpeta";
-            this.txtnombrecarpeta.Padding = new System.Windows.Forms.Padding(7);
-            this.txtnombrecarpeta.PasswordChar = false;
-            this.txtnombrecarpeta.Size = new System.Drawing.Size(293, 31);
-            this.txtnombrecarpeta.TabIndex = 42;
-            this.txtnombrecarpeta.Texts = "";
-            this.txtnombrecarpeta.UnderlinedStyle = false;
-            this.txtnombrecarpeta._TextChanged += new System.EventHandler(this.txtnombrecarpeta__TextChanged);
+            this.txtcorreo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtcorreo.BorderColor = System.Drawing.Color.Green;
+            this.txtcorreo.BorderFocusColor = System.Drawing.Color.DarkGreen;
+            this.txtcorreo.BorderSize = 2;
+            this.txtcorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcorreo.ForeColor = System.Drawing.Color.DimGray;
+            this.txtcorreo.Location = new System.Drawing.Point(157, 66);
+            this.txtcorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtcorreo.Multiline = false;
+            this.txtcorreo.Name = "txtcorreo";
+            this.txtcorreo.Padding = new System.Windows.Forms.Padding(7);
+            this.txtcorreo.PasswordChar = false;
+            this.txtcorreo.Size = new System.Drawing.Size(293, 31);
+            this.txtcorreo.TabIndex = 42;
+            this.txtcorreo.Texts = "";
+            this.txtcorreo.UnderlinedStyle = false;
+            this.txtcorreo._TextChanged += new System.EventHandler(this.txtnombrecarpeta__TextChanged);
             // 
             // rjButton1
             // 
@@ -258,7 +258,7 @@ namespace SistemaMediar.Dialogo
         private System.Windows.Forms.Panel panel3;
         private RJButton rjButton1;
         private System.Windows.Forms.Label label3;
-        private Control.RjTexboxt txtnombrecarpeta;
+        private Control.RjTexboxt txtcorreo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }

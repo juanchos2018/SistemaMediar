@@ -36,6 +36,7 @@ namespace SistemaMediar.Presentacion
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblcorreo = new System.Windows.Forms.Label();
             this.btnnuevocaso = new SistemaMediar.RJButton();
             this.txtdniciente = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -79,6 +80,8 @@ namespace SistemaMediar.Presentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lblcorreo);
             this.panel1.Controls.Add(this.btnnuevocaso);
             this.panel1.Controls.Add(this.txtdniciente);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -90,6 +93,16 @@ namespace SistemaMediar.Presentacion
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(869, 174);
             this.panel1.TabIndex = 43;
+            // 
+            // lblcorreo
+            // 
+            this.lblcorreo.AutoSize = true;
+            this.lblcorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcorreo.Location = new System.Drawing.Point(691, 131);
+            this.lblcorreo.Name = "lblcorreo";
+            this.lblcorreo.Size = new System.Drawing.Size(57, 20);
+            this.lblcorreo.TabIndex = 15;
+            this.lblcorreo.Text = "label2";
             // 
             // btnnuevocaso
             // 
@@ -104,7 +117,7 @@ namespace SistemaMediar.Presentacion
             this.btnnuevocaso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnnuevocaso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnnuevocaso.ForeColor = System.Drawing.Color.LightYellow;
-            this.btnnuevocaso.Location = new System.Drawing.Point(695, 10);
+            this.btnnuevocaso.Location = new System.Drawing.Point(693, 10);
             this.btnnuevocaso.Name = "btnnuevocaso";
             this.btnnuevocaso.Size = new System.Drawing.Size(163, 40);
             this.btnnuevocaso.TabIndex = 14;
@@ -270,5 +283,6 @@ namespace SistemaMediar.Presentacion
         private System.Windows.Forms.FlowLayoutPanel FlowLayout;
         private System.Windows.Forms.TextBox txtdniciente;
         private RJButton btnnuevocaso;
+        private System.Windows.Forms.Label lblcorreo;
     }
 }

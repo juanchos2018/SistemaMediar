@@ -24,6 +24,8 @@ namespace SistemaMediar.Presentacion
         public string IdCarpeta { get; set; }
         public int IdEmpresa { get; set; }
 
+        public string correoCliente { get; set; } = "correo@gmail.com";
+
 
         public FrmDocumentosCaso(string dni, int id)
         {
@@ -33,10 +35,12 @@ namespace SistemaMediar.Presentacion
         }
         private void FrmDocumentosCaso_Load(object sender, EventArgs e)
         {
-            ListarDocumentos();
+          
             lbldni.Text = Dnicliente;
             DatosCliente(Dnicliente);
             txtidconciliacion.Text = idconciliacion.ToString();
+
+            ListarDocumentos();
         }
 
         private void DatosCliente(string dni)
@@ -46,6 +50,30 @@ namespace SistemaMediar.Presentacion
             datos = datos.Registro(datos);
             lblnombres.Text = datos.NombreCliente + " " + datos.ApellidoCliente;
             lbltelefono.Text = datos.CelularCliente;
+            correoCliente = datos.CorreoCliente;
+            lblcorreo.Text = datos.CorreoCliente;
+
+            ClsConciliacion conciliacion = new ClsConciliacion();
+            conciliacion.IdConciliacion = idconciliacion;
+            conciliacion.IdEmpresa = 4;
+            conciliacion = conciliacion.Registro(conciliacion);
+            lbltema.Text = conciliacion.Titulo;
+
+            string etado = conciliacion.Estado;
+
+            if (etado.Equals("1"))
+            {
+                lblestado.Text = "Activo";
+                lblestado.ForeColor = Color.Green;
+            }
+            else
+            {
+                lblestado.Text = "Cerrado";
+                lblestado.ForeColor = Color.Red;
+
+            }
+
+
         }
         private void ListarDocumentos()
         {
@@ -65,6 +93,7 @@ namespace SistemaMediar.Presentacion
                 objeto.Nombre = data.Rows[i]["NombreArchivo"].ToString();
                 objeto.RutaServi = data.Rows[i]["RutaArchivo"].ToString();
                 objeto.TipoArchivo = data.Rows[i]["TipoArchivo"].ToString();
+                objeto.correo = correoCliente;
                 if (data.Rows[i]["TipoArchivo"].ToString().Equals(".docx") || data.Rows[i]["TipoArchivo"].ToString().Equals(".doc"))
                 {
                     objeto.Icon = Resources.imageword;
@@ -193,7 +222,24 @@ namespace SistemaMediar.Presentacion
 
         private void txtfiltro__TextChanged(object sender, EventArgs e)
         {
+            foreach (DocConciliacion item in FlowLayout.Controls)
+            {
+                try
+                {
+                    if (!item.Nombre.ToLower().Contains(txtfiltro.Texts.ToLower()))
+                    {
+                        item.Visible = false;
+                    }
+                    else
+                    {
+                        item.Visible = true;
+                    }
+                }
+                catch (Exception)
+                {
 
+                }
+            }
         }
     }
 }

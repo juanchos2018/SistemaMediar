@@ -53,6 +53,7 @@ namespace SistemaMediar.Presentacion
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.calendar1 = new Calendar.NET.Calendar();
             this.pnltop.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -297,6 +298,7 @@ namespace SistemaMediar.Presentacion
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.calendar1);
             this.panel7.Controls.Add(this.panel2);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 197);
@@ -327,6 +329,32 @@ namespace SistemaMediar.Presentacion
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(12, 357);
             this.panel9.TabIndex = 10;
+            // 
+            // calendar1
+            // 
+            this.calendar1.AllowEditingEvents = false;
+            this.calendar1.BackColor = System.Drawing.Color.Transparent;
+            this.calendar1.CalendarDate = new System.DateTime(2012, 4, 24, 13, 16, 0, 0);
+            this.calendar1.CalendarView = Calendar.NET.CalendarViews.Month;
+            this.calendar1.DateHeaderFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.calendar1.DayOfWeekFont = new System.Drawing.Font("Arial", 10F);
+            this.calendar1.DaysFont = new System.Drawing.Font("Arial", 10F);
+            this.calendar1.DayViewTimeFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.calendar1.DimDisabledEvents = true;
+            this.calendar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.calendar1.HighlightCurrentDay = true;
+            this.calendar1.LoadPresetHolidays = true;
+            this.calendar1.Location = new System.Drawing.Point(10, 0);
+            this.calendar1.Name = "calendar1";
+            this.calendar1.ShowArrowControls = true;
+            this.calendar1.ShowDashedBorderOnDisabledEvents = true;
+            this.calendar1.ShowDateInHeader = true;
+            this.calendar1.ShowDisabledEvents = false;
+            this.calendar1.ShowEventTooltips = true;
+            this.calendar1.ShowTodayButton = true;
+            this.calendar1.Size = new System.Drawing.Size(646, 370);
+            this.calendar1.TabIndex = 12;
+            this.calendar1.TodayFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             // 
             // FrmDashoard
             // 
@@ -389,5 +417,6 @@ namespace SistemaMediar.Presentacion
         private System.Windows.Forms.Panel panel9;
        // private Calendar.NET.Calendar calendar1;
         private System.Windows.Forms.Panel panel2;
+        private Calendar.NET.Calendar calendar1;
     }
 }

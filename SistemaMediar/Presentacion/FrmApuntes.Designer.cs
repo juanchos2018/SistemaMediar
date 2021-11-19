@@ -47,6 +47,9 @@ namespace SistemaMediar.Presentacion
             this.dtphora = new System.Windows.Forms.DateTimePicker();
             this.dtpfecha = new System.Windows.Forms.DateTimePicker();
             this.dgvApuntes = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -61,7 +64,7 @@ namespace SistemaMediar.Presentacion
             this.txtdescripcion.BorderSize = 2;
             this.txtdescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdescripcion.ForeColor = System.Drawing.Color.DimGray;
-            this.txtdescripcion.Location = new System.Drawing.Point(21, 85);
+            this.txtdescripcion.Location = new System.Drawing.Point(21, 91);
             this.txtdescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtdescripcion.Multiline = false;
             this.txtdescripcion.Name = "txtdescripcion";
@@ -96,7 +99,7 @@ namespace SistemaMediar.Presentacion
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 51);
+            this.label2.Location = new System.Drawing.Point(18, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 20);
             this.label2.TabIndex = 54;
@@ -189,6 +192,9 @@ namespace SistemaMediar.Presentacion
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.label4);
+            this.panel7.Controls.Add(this.label3);
+            this.panel7.Controls.Add(this.label1);
             this.panel7.Controls.Add(this.cbotipo);
             this.panel7.Controls.Add(this.dtphora);
             this.panel7.Controls.Add(this.dtpfecha);
@@ -203,33 +209,33 @@ namespace SistemaMediar.Presentacion
             // 
             // cbotipo
             // 
-            this.cbotipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbotipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbotipo.FormattingEnabled = true;
             this.cbotipo.Items.AddRange(new object[] {
             "Audiencia",
             "Reunion",
             "Cita"});
-            this.cbotipo.Location = new System.Drawing.Point(22, 24);
+            this.cbotipo.Location = new System.Drawing.Point(22, 30);
             this.cbotipo.Name = "cbotipo";
-            this.cbotipo.Size = new System.Drawing.Size(283, 24);
+            this.cbotipo.Size = new System.Drawing.Size(294, 28);
             this.cbotipo.TabIndex = 63;
             // 
             // dtphora
             // 
-            this.dtphora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtphora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtphora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtphora.Location = new System.Drawing.Point(21, 195);
+            this.dtphora.Location = new System.Drawing.Point(205, 148);
             this.dtphora.Name = "dtphora";
-            this.dtphora.Size = new System.Drawing.Size(113, 22);
+            this.dtphora.Size = new System.Drawing.Size(111, 26);
             this.dtphora.TabIndex = 62;
             // 
             // dtpfecha
             // 
-            this.dtpfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpfecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpfecha.Location = new System.Drawing.Point(21, 142);
+            this.dtpfecha.Location = new System.Drawing.Point(21, 148);
             this.dtpfecha.Name = "dtpfecha";
-            this.dtpfecha.Size = new System.Drawing.Size(289, 22);
+            this.dtpfecha.Size = new System.Drawing.Size(174, 26);
             this.dtpfecha.TabIndex = 58;
             // 
             // dgvApuntes
@@ -277,6 +283,36 @@ namespace SistemaMediar.Presentacion
             this.dgvApuntes.TabIndex = 67;
             this.dgvApuntes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvApuntes_CellContentClick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(18, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 20);
+            this.label1.TabIndex = 64;
+            this.label1.Text = "Tipo";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(18, 126);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 20);
+            this.label3.TabIndex = 65;
+            this.label3.Text = "Fecha";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(201, 125);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 20);
+            this.label4.TabIndex = 66;
+            this.label4.Text = "Hora";
+            // 
             // FrmApuntes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,5 +354,8 @@ namespace SistemaMediar.Presentacion
         private System.Windows.Forms.DateTimePicker dtpfecha;
         private System.Windows.Forms.DateTimePicker dtphora;
         private System.Windows.Forms.ComboBox cbotipo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
     }
 }

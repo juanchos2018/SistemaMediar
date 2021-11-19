@@ -94,7 +94,7 @@ namespace SistemaMediar.Presentacion
             this.btncarpetas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncarpetas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncarpetas.ForeColor = System.Drawing.Color.White;
-            this.btncarpetas.Location = new System.Drawing.Point(0, 242);
+            this.btncarpetas.Location = new System.Drawing.Point(3, 194);
             this.btncarpetas.Name = "btncarpetas";
             this.btncarpetas.Size = new System.Drawing.Size(226, 41);
             this.btncarpetas.TabIndex = 4;
@@ -109,7 +109,7 @@ namespace SistemaMediar.Presentacion
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 194);
+            this.button1.Location = new System.Drawing.Point(0, 241);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(226, 41);
             this.button1.TabIndex = 3;
@@ -150,25 +150,27 @@ namespace SistemaMediar.Presentacion
             // pnlcontenedor
             // 
             this.pnlcontenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlcontenedor.Location = new System.Drawing.Point(226, 40);
+            this.pnlcontenedor.Location = new System.Drawing.Point(226, 34);
             this.pnlcontenedor.Name = "pnlcontenedor";
-            this.pnlcontenedor.Size = new System.Drawing.Size(703, 482);
+            this.pnlcontenedor.Size = new System.Drawing.Size(703, 488);
             this.pnlcontenedor.TabIndex = 1;
             // 
             // pnltop
             // 
+            this.pnltop.BackColor = System.Drawing.Color.Green;
             this.pnltop.Controls.Add(this.lbltipoformulario);
             this.pnltop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnltop.Location = new System.Drawing.Point(226, 0);
             this.pnltop.Name = "pnltop";
-            this.pnltop.Size = new System.Drawing.Size(703, 40);
+            this.pnltop.Size = new System.Drawing.Size(703, 34);
             this.pnltop.TabIndex = 2;
             // 
             // lbltipoformulario
             // 
             this.lbltipoformulario.AutoSize = true;
             this.lbltipoformulario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltipoformulario.Location = new System.Drawing.Point(20, 11);
+            this.lbltipoformulario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbltipoformulario.Location = new System.Drawing.Point(20, 6);
             this.lbltipoformulario.Name = "lbltipoformulario";
             this.lbltipoformulario.Size = new System.Drawing.Size(76, 25);
             this.lbltipoformulario.TabIndex = 0;

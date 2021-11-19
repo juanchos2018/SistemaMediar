@@ -38,6 +38,7 @@ namespace SistemaMediar.Presentacion
             PantallaOk();
             Abrir(new FrmDashoard());
             lbltipoformulario.Text = "Inicio";
+
             btncarpetas2.Visible = false;
         }
         private Form formaction = null;

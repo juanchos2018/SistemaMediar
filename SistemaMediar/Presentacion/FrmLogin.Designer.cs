@@ -35,7 +35,7 @@ namespace SistemaMediar.Presentacion
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rjTexboxt1 = new SistemaMediar.Control.RjTexboxt();
+            this.txtclave = new SistemaMediar.Control.RjTexboxt();
             this.rjButton1 = new SistemaMediar.RJButton();
             this.txtusuario = new SistemaMediar.Control.RjTexboxt();
             this.panel2.SuspendLayout();
@@ -104,25 +104,25 @@ namespace SistemaMediar.Presentacion
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // rjTexboxt1
+            // txtclave
             // 
-            this.rjTexboxt1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTexboxt1.BorderColor = System.Drawing.Color.Green;
-            this.rjTexboxt1.BorderFocusColor = System.Drawing.Color.Lime;
-            this.rjTexboxt1.BorderSize = 2;
-            this.rjTexboxt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTexboxt1.ForeColor = System.Drawing.Color.Black;
-            this.rjTexboxt1.Location = new System.Drawing.Point(276, 186);
-            this.rjTexboxt1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTexboxt1.Multiline = false;
-            this.rjTexboxt1.Name = "rjTexboxt1";
-            this.rjTexboxt1.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTexboxt1.PasswordChar = false;
-            this.rjTexboxt1.Size = new System.Drawing.Size(245, 31);
-            this.rjTexboxt1.TabIndex = 21;
-            this.rjTexboxt1.Texts = "";
-            this.rjTexboxt1.UnderlinedStyle = false;
-            this.rjTexboxt1._TextChanged += new System.EventHandler(this.rjTexboxt1__TextChanged);
+            this.txtclave.BackColor = System.Drawing.SystemColors.Window;
+            this.txtclave.BorderColor = System.Drawing.Color.Green;
+            this.txtclave.BorderFocusColor = System.Drawing.Color.Lime;
+            this.txtclave.BorderSize = 2;
+            this.txtclave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtclave.ForeColor = System.Drawing.Color.Black;
+            this.txtclave.Location = new System.Drawing.Point(276, 186);
+            this.txtclave.Margin = new System.Windows.Forms.Padding(4);
+            this.txtclave.Multiline = false;
+            this.txtclave.Name = "txtclave";
+            this.txtclave.Padding = new System.Windows.Forms.Padding(7);
+            this.txtclave.PasswordChar = false;
+            this.txtclave.Size = new System.Drawing.Size(245, 31);
+            this.txtclave.TabIndex = 21;
+            this.txtclave.Texts = "";
+            this.txtclave.UnderlinedStyle = false;
+            this.txtclave._TextChanged += new System.EventHandler(this.rjTexboxt1__TextChanged);
             // 
             // rjButton1
             // 
@@ -169,7 +169,7 @@ namespace SistemaMediar.Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(596, 282);
             this.Controls.Add(this.txtusuario);
-            this.Controls.Add(this.rjTexboxt1);
+            this.Controls.Add(this.txtclave);
             this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -180,6 +180,7 @@ namespace SistemaMediar.Presentacion
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -197,7 +198,7 @@ namespace SistemaMediar.Presentacion
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private RJButton rjButton1;
-        private Control.RjTexboxt rjTexboxt1;
+        private Control.RjTexboxt txtclave;
         private Control.RjTexboxt txtusuario;
     }
 }

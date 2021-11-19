@@ -15,7 +15,7 @@ namespace SistemaMediar.Dialogo
     {
 
         public string RutaArchivo { get; set; }
-
+        public string Correo { get; set; }
         public DlgSendEmail()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace SistemaMediar.Dialogo
 
         private void DlgSendEmail_Load(object sender, EventArgs e)
         {
-
+            txtcorreo.Texts = Correo;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -38,15 +38,15 @@ namespace SistemaMediar.Dialogo
 
         private void btnenviar_Click(object sender, EventArgs e)
         {
-            if (txtnombrecarpeta.Texts=="")
+            if (txtcorreo.Texts=="")
             {
-                errorProvider1.SetError(txtnombrecarpeta, "poner correo");
-                txtnombrecarpeta.Focus();
+                errorProvider1.SetError(txtcorreo, "poner correo");
+                txtcorreo.Focus();
                 return;
             }
-            errorProvider1.SetError(txtnombrecarpeta, "");
+            errorProvider1.SetError(txtcorreo, "");
             WebArchivos we = new WebArchivos();
-            var response =   we.EnviarCorreo(txtnombrecarpeta.Texts, RutaArchivo);
+            var response =   we.EnviarCorreo(txtcorreo.Texts, RutaArchivo);
             DlgMensajeOk mensaje = new DlgMensajeOk();
             mensaje.mensaje = response.ToString();
             mensaje.tipo = "Ok";

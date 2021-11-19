@@ -126,6 +126,7 @@ namespace SistemaMediar.Presentacion
                 // string nombre = this.dgv2.CurrentRow.Cells["Nombre"].Value.ToString();
                 string dniCliente = this.dgv2.CurrentRow.Cells["DniCliente"].Value.ToString();
                 FrmPrincipal f = FrmPrincipal.GetInstancia();
+                f.PonerTexto("Editar Cliente");
                 f.Abrir(new FrmClienteEditar(dniCliente));
             }
 
@@ -133,6 +134,7 @@ namespace SistemaMediar.Presentacion
             {
                 string dniCliente = this.dgv2.CurrentRow.Cells["DniCliente"].Value.ToString();
                 FrmPrincipal f = FrmPrincipal.GetInstancia();
+                f.PonerTexto("Casos Cliente");
                 f.Abrir(new FrmDetalleCliente(dniCliente));
             }
 

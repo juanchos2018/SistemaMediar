@@ -32,7 +32,7 @@ namespace SistemaMediar.Presentacion
         {
             FrmPrincipal f = FrmPrincipal.GetInstancia();
             f.PonerTexto("Registrar Nuevo Caso");
-          //  f.Abrir(new FrmNuevoCaso2());
+          /// f.Abrir(new FrmNuevoCaso2());
             f.Abrir(new FrmNuevoCaso());
         }
 

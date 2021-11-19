@@ -97,7 +97,7 @@ namespace SistemaMediar.Presentacion
             this.btnCarpeta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCarpeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCarpeta.ForeColor = System.Drawing.Color.LightYellow;
-            this.btnCarpeta.Location = new System.Drawing.Point(317, 6);
+            this.btnCarpeta.Location = new System.Drawing.Point(327, 6);
             this.btnCarpeta.Name = "btnCarpeta";
             this.btnCarpeta.Size = new System.Drawing.Size(119, 40);
             this.btnCarpeta.TabIndex = 46;
@@ -118,7 +118,7 @@ namespace SistemaMediar.Presentacion
             this.btnnuevocarpeta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnnuevocarpeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnnuevocarpeta.ForeColor = System.Drawing.Color.LightYellow;
-            this.btnnuevocarpeta.Location = new System.Drawing.Point(3, 5);
+            this.btnnuevocarpeta.Location = new System.Drawing.Point(19, 5);
             this.btnnuevocarpeta.Name = "btnnuevocarpeta";
             this.btnnuevocarpeta.Size = new System.Drawing.Size(149, 40);
             this.btnnuevocarpeta.TabIndex = 45;
@@ -140,7 +140,7 @@ namespace SistemaMediar.Presentacion
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.LightYellow;
-            this.rjButton1.Location = new System.Drawing.Point(167, 5);
+            this.rjButton1.Location = new System.Drawing.Point(184, 5);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(130, 40);
             this.rjButton1.TabIndex = 44;

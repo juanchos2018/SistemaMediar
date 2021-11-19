@@ -20,7 +20,7 @@ namespace SistemaMediar.Presentacion
 
         private void FrmApuntes_Load(object sender, EventArgs e)
         {
-
+            Listara();
         }
 
         private void label2_Click(object sender, EventArgs e)

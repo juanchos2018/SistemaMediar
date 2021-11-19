@@ -44,7 +44,6 @@ namespace SistemaMediar.Presentacion
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnnuevocaso = new SistemaMediar.RJButton();
             this.txtfiltro = new SistemaMediar.Control.RjTexboxt();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgvarchivados = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -86,7 +85,6 @@ namespace SistemaMediar.Presentacion
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -208,17 +206,6 @@ namespace SistemaMediar.Presentacion
             this.txtfiltro.Texts = "";
             this.txtfiltro.UnderlinedStyle = false;
             this.txtfiltro._TextChanged += new System.EventHandler(this.txtfiltro__TextChanged);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(848, 492);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Casos Importantes";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
@@ -359,7 +346,6 @@ namespace SistemaMediar.Presentacion
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dgvCasos;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private Control.RjTexboxt txtfiltro;
         private System.Windows.Forms.DataGridView dgvarchivados;

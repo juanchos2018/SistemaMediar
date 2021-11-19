@@ -83,7 +83,7 @@ namespace SistemaMediar.Presentacion
             this.txtfiltro.BorderSize = 2;
             this.txtfiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtfiltro.ForeColor = System.Drawing.Color.Black;
-            this.txtfiltro.Location = new System.Drawing.Point(20, 13);
+            this.txtfiltro.Location = new System.Drawing.Point(6, 21);
             this.txtfiltro.Margin = new System.Windows.Forms.Padding(4);
             this.txtfiltro.Multiline = false;
             this.txtfiltro.Name = "txtfiltro";
@@ -117,7 +117,7 @@ namespace SistemaMediar.Presentacion
             this.btnnuevocarpeta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnnuevocarpeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnnuevocarpeta.ForeColor = System.Drawing.Color.LightYellow;
-            this.btnnuevocarpeta.Location = new System.Drawing.Point(89, 12);
+            this.btnnuevocarpeta.Location = new System.Drawing.Point(116, 12);
             this.btnnuevocarpeta.Name = "btnnuevocarpeta";
             this.btnnuevocarpeta.Size = new System.Drawing.Size(149, 40);
             this.btnnuevocarpeta.TabIndex = 42;
